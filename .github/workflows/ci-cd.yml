@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r backend/requirements.txt
       # Bu yerda testlaringizni yugurtirasiz
-      - name: Run Tests
+      - name: Run Tests # Bu yerda testlaringizni yugurtirasiz
         run: echo "Testlar muvaffaqiyatli o'tdi" 
 
 
@@ -27,12 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            cd ~/ApparelCloud
-            git pull origin master
-            ./deploy.sh
+          uses: appleboy/ssh-action@v1.2.0
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.SSH_KEY }}
+            script: |
+              cd ~/crm
+              git pull origin master
