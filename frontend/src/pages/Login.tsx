@@ -58,9 +58,9 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 text-black shadow-gold font-bold mb-4">
             <Cloud size={24} className="text-black" />
           </div>
-          <h2 className="text-2xl font-bold tracking-tight text-white">RETAKE</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-white">RETAKE </h2>
           <p className="text-xs text-gray-400 mt-1.5 text-center">
-            Ombor, mijozlar, ta&apos;minotchilar va buyurtmalarni boshqarish
+            RETAKE
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-              Email manzil
+              RETAKE
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
