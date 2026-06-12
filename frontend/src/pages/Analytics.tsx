@@ -53,7 +53,7 @@ const Analytics: React.FC = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-white">Tahlil va hisobotlar</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-white">RETAKE</h1>
         <p className="text-xs text-gray-400 mt-0.5">
           Barcha ko&apos;rsatkichlar ma&apos;lumotlar bazasidagi haqiqiy buyurtma va ombor yozuvlaridan olinadi
         </p>

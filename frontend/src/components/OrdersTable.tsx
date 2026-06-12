@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { Order } from '../types';
 import { ORDER_STATUS_UZ } from '../lib/uz';
 
