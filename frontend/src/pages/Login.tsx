@@ -130,7 +130,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
         </form>
 
         <div className="mt-8 pt-6 border-t border-white/5 text-center text-[10px] text-gray-500">
-          <p>Standart hisoblar:</p>
+          <p>Standart hisoblar: test</p>
           <div className="flex flex-col justify-center gap-1 mt-2">
             <span>
               Admin: <strong className="text-gray-400">admin@apparelcloud.com</strong> /{' '}
