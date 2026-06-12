@@ -6,7 +6,6 @@ on:
       - master
 
 jobs:
-
   test:
     runs-on: ubuntu-latest
     steps:
@@ -33,3 +32,7 @@ jobs:
           script: |
             cd ~/crm
             git pull origin master
+            cd frontend
+            npm install
+            npm run build
+            pm2 restart crm-app
