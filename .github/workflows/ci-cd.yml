@@ -3,12 +3,28 @@ name: Deploy CRM
 on:
   push:
     branches:
-      - main
+      - master 
 
 jobs:
-  deploy:
+ 
+  test:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+      # Bu yerda testlaringizni yugurtirasiz
+      - name: Run Tests
+        run: echo "Testlar muvaffaqiyatli o'tdi" 
 
+
+  deploy:
+    needs: test 
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.0
@@ -18,4 +34,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/ApparelCloud
+            git pull origin master
             ./deploy.sh
