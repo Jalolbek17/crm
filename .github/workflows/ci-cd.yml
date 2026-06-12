@@ -31,12 +31,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-           
             cd ~/crm
             git pull origin master
-            
-            
-            cd frontend
-            npm install
-            npm run build
-            
