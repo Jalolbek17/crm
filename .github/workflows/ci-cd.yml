@@ -35,4 +35,7 @@ jobs:
             cd frontend
             npm install
             npm run build
-            pm2 restart crm-app
+            pm2 stop crm-app
+            pm2 delete crm-app
+            pm2 serve dist 3001 --name "crm-app" --spa
+            pm2 save
